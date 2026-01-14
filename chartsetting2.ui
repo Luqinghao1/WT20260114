@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChartSetting2</class>
+ <widget class="QDialog" name="ChartSetting2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图表设置 (双坐标)</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QDialog { background-color: #ffffff; color: #000000; font-family: &quot;Microsoft YaHei&quot;; font-size: 10pt; }
+QPushButton { border: 1px solid #8f8f91; border-radius: 4px; background-color: #f5f5f5; color: #000000; padding: 5px 15px; }
+QPushButton:hover { background-color: #e0e0e0; }
+QPushButton:pressed { background-color: #d0d0d0; }
+QTableWidget { selection-background-color: #0078d7; selection-color: #ffffff; gridline-color: #d0d0d0; }
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabGeneral">
+      <attribute name="title">
+       <string>标题设置</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_Title">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelTitle">
+         <property name="text">
+          <string>图表标题:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="editTitle"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="checkTitleVisible">
+         <property name="text">
+          <string>显示标题</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabTop">
+      <attribute name="title">
+       <string>顶部坐标轴(压力)</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_Top">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_TY">
+         <property name="text">
+          <string>Y轴标签:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="editTopYLabel"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_TYmin">
+         <property name="text">
+          <string>Y轴最小值:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="spinTopYMin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-99999999.00</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_TYmax">
+         <property name="text">
+          <string>Y轴最大值:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="spinTopYMax">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-99999999.00</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="checkTopYLog">
+         <property name="text">
+          <string>Y轴对数坐标</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="checkTopXGrid">
+         <property name="text">
+          <string>显示X网格</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="checkTopYGrid">
+         <property name="text">
+          <string>显示Y网格</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabBottom">
+      <attribute name="title">
+       <string>底部坐标轴(产量)</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_Bot">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_BX">
+         <property name="text">
+          <string>X轴标签:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="editBottomXLabel"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_BY">
+         <property name="text">
+          <string>Y轴标签:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="editBottomYLabel"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_BXMin">
+         <property name="text">
+          <string>X轴最小值:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="spinBottomXMin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-99999999.00</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_BXMax">
+         <property name="text">
+          <string>X轴最大值:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="spinBottomXMax">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-99999999.00</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_BYMin">
+         <property name="text">
+          <string>Y轴最小值:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="spinBottomYMin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-99999999.00</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_BYMax">
+         <property name="text">
+          <string>Y轴最大值:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QDoubleSpinBox" name="spinBottomYMax">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-99999999.00</double>
+         </property>
+         <property name="maximum">
+          <double>99999999.00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QCheckBox" name="checkBottomXGrid">
+         <property name="text">
+          <string>显示X网格</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QCheckBox" name="checkBottomYGrid">
+         <property name="text">
+          <string>显示Y网格</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabCurves">
+      <attribute name="title">
+       <string>图例设置</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_Curves">
+       <item>
+        <widget class="QLabel" name="label_Curves">
+         <property name="text">
+          <string>曲线列表 (双击名称以修改):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableGraphs">
+         <property name="columnCount">
+          <number>3</number>
+         </property>
+         <column>
+          <property name="text">
+           <string>样式</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>曲线名称</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>图例显示</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnApply">
+       <property name="text">
+        <string>应用</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnOk">
+       <property name="text">
+        <string>确定</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCancel">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
